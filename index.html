@@ -7,50 +7,37 @@
       <input type="text" id="main" value="" placeholder="Main heading" />
       <input type="text" id="sub" value="" placeholder="sub heading" />
       <input type="button" id="btn" value="GO" />
-      <input type="button" id="download" value="Download" />
+      <input type="button" id="download" value="Download" /><br />
+      <img id="svg" />
     </form>
     <script type="text/javascript">
+      var i = 0;
       var src,
         fileName = "hai";
       document.getElementById("btn").onclick = function () {
+        i = 1;
         var mainh = document.getElementById("main").value,
           subh = document.getElementById("sub").value;
-        (src =
-          "https://svg-banners.vercel.app/api?type=origin&text1=" +
-          mainh +
-          "%20&text2=" +
-          subh +
-          "&width=800&height=400"),
-          (img = document.createElement("img"));
-
-        img.src = src;
-        img.id = fileName;
-        document.body.appendChild(img);
+        if (mainh == "" || subh == "") {
+          alert("Please enter both heading");
+        } else {
+          src =
+            "https://svg-banners.vercel.app/api?type=origin&text1=" +
+            mainh +
+            "%20&text2=" +
+            subh +
+            "&width=800&height=400";
+          svg = document.getElementById("svg");
+          svg.src = src;
+        }
       };
-      // document.getElementById("download").onclick = function () {
-      //   const fileName = src.split("/").pop();
-      //   var el = document.createElement("a");
-      //   el.setAttribute("href", src);
-      //   el.setAttribute("download", fileName);
-      //   document.body.appendChild(el);
-      //   el.click();
-      //   el.remove();
-      // };
-
       document.getElementById("download").onclick = function () {
-        var svg_data = document.getElementById(fileName).innerHTML; //put id of your svg element here
-
-        var head =
-          '<svg title="graph" version="1.1" xmlns="http://www.w3.org/2000/svg">';
-
-        //if you have some additional styling like graph edges put them inside <style> tag
-
-        var style =
-          "<style>circle {cursor: pointer;stroke-width: 1.5px;}text {font: 10px arial;}path {stroke: DimGrey;stroke-width: 1.5px;}</style>";
-
-        var full_svg = head + style + svg_data + "</svg>";
-        var blob = new Blob([full_svg], { type: "image/svg+xml" });
-        saveAs(blob, "graph.svg");
+        var a = document.createElement("a");
+        a.href = src;
+        a.download = "output.png";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
       };
     </script>
   </body>
