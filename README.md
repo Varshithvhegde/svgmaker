@@ -10,6 +10,9 @@
 
 ### ✨ [Demo](https://varshithvhegde.me/svgmaker/)
 
+## Screenshot  
+<img src="https://user-images.githubusercontent.com/80502833/183860529-0e7e8fbb-3370-41d2-86d8-edaa81ce2017.png" width=800px/>
+
 ## Author
 
 👤 **Varshith V Hegde**
