@@ -7,7 +7,7 @@
 </p>
 
 ## Hacktober Fest Contribution
-- Create even a small contribution and create a Pull Request I will merge it this repo is for hacktoberfest2022.
+- **Create even a small contribution and create a Pull Request I will merge it this repo is for hacktoberfest2022.**
 
 > Simple Web Project that can generate cool Svg from Heading and Subheading
 
