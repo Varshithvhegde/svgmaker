@@ -2,14 +2,23 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   </head>
-  <body>
-    <form>
+  <body
+    style="
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;"
+  >
+    <div>
+        <form>
       <input type="text" id="main" value="" placeholder="Main heading" />
       <input type="text" id="sub" value="" placeholder="sub heading" />
       <input type="button" id="btn" value="GO" />
       <input type="button" id="download" value="Download" /><br />
-      <img id="svg" />
+      
     </form>
+    <div style="position:fixed;"><img id="svg" style="width:55%;" /></div>
+    </div>
     <script type="text/javascript">
       var i = 0;
       var src,
