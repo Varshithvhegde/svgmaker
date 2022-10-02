@@ -6,6 +6,9 @@
   </a>
 </p>
 
+## Hacktober Fest Contribution
+- Create even a small contribution and create a Pull Request I will merge it this repo is for hacktobbberfest2022.
+
 > Simple Web Project that can generate cool Svg from Heading and Subheading
 
 ### ✨ [Demo](https://varshithvhegde.me/svgmaker/)
@@ -19,8 +22,6 @@
 
 * Website: varshithvhegde.me
 * Github: [@Varshithvhegde](https://github.com/Varshithvhegde)
-## Hacktober Fest Contribution
-- Create even a small contribution and create a Pull Request I will merge it this repo is for hacktobbberfest2022.
 ## Show your support
 
 Give a ⭐️ if this project helped you!
