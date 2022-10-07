@@ -1,90 +1,88 @@
 <html>
 
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
-<body style="
-      height: 100vh;
-      width: 100vw;
-      display: flex;
-      justify-content: center;">
-    <div>
-        <form>
+<body
 
-      <input
-          type="text"
-          id="main"
-          value=""
-          placeholder="Main heading"
-          style="
+    style="
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    " >
+
+
+
+
+
+  <form>
+
+    <input type="text" id="main" value="" placeholder="Main heading" style="
             background-color: transparent;
             outline: none;
             padding: 5px 10px;
             border-radius: 5px;
             border: black solid 2px;
-          "
-        />
-        <input
-          style="
+          " />
+    <input style="
             background-color: transparent;
             outline: none;
             padding: 5px 10px;
             border-radius: 5px;
             border: black solid 2px;
-          "
-          type="text"
-          id="sub"
-          value=""
-          placeholder="sub heading"
-        />
-      <input type="button" id="btn" value="GO" />
-      <input type="button" id="download" value="Download" /><br />
-      
-    </form>
+          " type="text" id="sub" value="" placeholder="sub heading" />
+
+
+
+    <input  type="button" id="btn" value="View" />
+    <input type="button" id="download" value="Download" /><br />
+    </div>
     <div style="position:fixed;"><img id="svg" style="width:55%;" /></div>
 
-            <input type="text" id="main" value="" placeholder="Main heading" />
-            <input type="text" id="sub" value="" placeholder="sub heading" />
-            <input style="border: black solid 2px;background-color: transparent;padding: 5px 10px;" type="button"
-                id="btn" value="GO" />
-            <input style="border: black solid 2px;background-color: transparent;padding: 5px 10px;" type="button"
-                id="download" value="Download" /><br />
+  </form>
+  <script type="text/javascript">
+    var i = 0;
+    var src,
+      fileName = "hai";
+    document.getElementById("btn").onclick = function() {
+      i = 1;
+      var mainh = document.getElementById("main").value,
+        subh = document.getElementById("sub").value;
+      if (mainh == "" || subh == "") {
+        alert("Please enter both heading");
+      } else {
+        src =
+          "https://svg-banners.vercel.app/api?type=origin&text1=" +
+          mainh +
+          "%20&text2=" +
+          subh +
+          "&width=800&height=400";
+        svg = document.getElementById("svg");
+        svg.src = src;
+      }
+    };
+   const download = document.getElementById('download');
+     download.addEventListener('click', function onClick(event){
 
-        </form>
-        <div style="position:fixed;"><img id="svg" style="width:55%;" /></div>
-
-    </div>
-    <script type="text/javascript">
-        var i = 0;
-        var src,
-            fileName = "hai";
-        document.getElementById("btn").onclick = function () {
-            i = 1;
-            var mainh = document.getElementById("main").value,
-                subh = document.getElementById("sub").value;
-            if (mainh == "" || subh == "") {
-                alert("Please enter both heading");
-            } else {
-                src =
-                    "https://svg-banners.vercel.app/api?type=origin&text1=" +
-                    mainh +
-                    "%20&text2=" +
-                    subh +
-                    "&width=800&height=400";
-                svg = document.getElementById("svg");
-                svg.src = src;
-            }
-        };
-        document.getElementById("download").onclick = function () {
-            var a = document.createElement("a");
-            a.href = src;
-            a.download = "output.png";
-            document.body.appendChild(a);
+        const a = document.createElement("a");
+        a.href = src;
+        a.download = "output.png";
+        document.body.appendChild(a);
             a.click();
-            document.body.removeChild(a);
-        };
-    </script>
+              document.body.removeChild(a);
+              document.body.style.backgroundColor = 'black';
+
+     });
+
+
+
+    document.getElementById("download").onclick = function() {
+
+    };
+
+  </script>
 </body>
 
 </html>
