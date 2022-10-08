@@ -1,0 +1,16 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+} 
+#main, #sub {
+    background-color: transparent; 
+    outline: none; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    border: black solid 2px
+}
+#id {
+    width: 55%;
+}
