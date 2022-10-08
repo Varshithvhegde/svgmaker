@@ -9,16 +9,35 @@
       crossorigin="anonymous"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+   
   </head>
+
   <body>
-    <form>
-      <input type="text" id="main" value="" placeholder="Enter main heading" /><br /><br />
-      <input type="text" id="sub" value="" placeholder="Enter sub heading" /><br /><br />
-      <button type="button" class="btn btn-success" id="btn">View</button>
-      <button type="button" class="btn btn-primary" id="download">Download</button>
-      <br /><br />
-      <div style="position: fixed"><img id="svg" style="width: 55%" /></div>
-    </form>
+    <div class="container">
+      <nav class="navbar-expand-lg navbar-light" style="text-align: center;">
+        <div class="container-fluid">
+          <h2 class="navbar-brand bg-light" href="#"><b>SVG MAKER</b></h2>
+        </div>
+      </nav>
+      <div class="form-det">
+        <form>
+          
+          <input type="text" id="main" value="" placeholder="Enter main heading" /><br /><br />
+       
+          <input type="text" id="sub" value="" placeholder="Enter sub heading" /><br /><br />
+          <button type="button" class="btn btn-success" id="btn">View</button>
+          <button type="button" class="btn btn-primary" id="download">Download</button>
+          <br /><br />
+          <div style="position: fixed"><img id="svg" style="width: 55%" /></div>
+        </form>
+      </div>
+     
+    </div>
+    
     <script src="index.js"></script>
+    <div class="footer">
+      <p>Copyright © 2022</p>
+    </div>
   </body>
+  
 </html>
