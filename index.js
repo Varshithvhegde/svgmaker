@@ -5,9 +5,9 @@ document.getElementById("btn").onclick = function () {
     var mainh = document.getElementById("main").value,
     subh = document.getElementById("sub").value;
     if (mainh == "" || subh == "") {
-    alert("Please enter both heading");
+    alert("Please enter both headings");
     } else {
-    src = "https://svg-banners.vercel.app/api?type=origin&text1=" + mainh + "%20&text2=" + subh + "&width=800&height=400";
+    src = "https://svg-banners.vercel.app/api?type=origin&text1=" + mainh + "%20&text2=" + subh + "&width=1130&height=600";
     svg = document.getElementById("svg");
     svg.src = src;
     }
@@ -20,7 +20,7 @@ download.addEventListener("click", function onClick(event) {
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-    document.body.style.backgroundColor = "black";
+    document.body.style.backgroundColor = "white";
 });
 
 document.getElementById("download").onclick = function () {};
