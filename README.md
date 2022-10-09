@@ -20,7 +20,7 @@
 
 👤 **Varshith V Hegde**
 
-* Website: varshithvhegde.me
+* Website: varshithvhegde.github.io
 * Github: [@Varshithvhegde](https://github.com/Varshithvhegde)
 ## Show your support
 
