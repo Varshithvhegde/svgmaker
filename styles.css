@@ -11,6 +11,7 @@ body {
 .title {
     font-family: 'DynaPuff', cursive;
     font-size: 3rem;
+    
 }
 b, strong {
     font-weight: bolder;
@@ -23,9 +24,11 @@ b, strong {
     background-color: transparent; 
     outline: none; 
     padding: 5px 10px; 
-    border-radius: 5px; 
-    border: black solid 2px
+    border-radius: 9px; 
+    border: black solid 2px;
+    width: 20%;
 }
+
 #id {
     width: 55%;
 }
@@ -38,7 +41,27 @@ b, strong {
     color: gray;
     text-align: center;
  }
+
 nav{
     font: 600;
-   /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    
 }
+
+button {
+    background: #255ff4;
+    border-radius: 0.2em;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    margin: auto;
+    padding: 0.5em 1em;
+    position: relative;
+    transition: background 0.15s linear;
+    width: 10.5em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    
+  }
+ 
