@@ -8,6 +8,14 @@ body {
     display: flex;
     justify-content: center;
 } 
+.title {
+    font-family: 'DynaPuff', cursive;
+    font-size: 3rem;
+}
+b, strong {
+    font-weight: bolder;
+    font-size: 50px;
+}
 .form-det{
     text-align: center;
 }
