@@ -10,17 +10,9 @@ document.getElementById("btn").onclick = function () {
     src = "https://svg-banners.vercel.app/api?type=origin&text1=" + mainh + "%20&text2=" + subh + "&width=1130&height=600";
     svg = document.getElementById("svg");
     svg.src = src;
+    document.getElementById("download").setAttribute("href",src)
+    document.getElementById("download").removeAttribute("hidden")
+    document.getElementById("btn").style.display = "none"
+
     }
 };
-const download = document.getElementById("download");
-download.addEventListener("click", function onClick(event) {
-    const a = document.createElement("a");
-    a.href = src;
-    a.download = "output.png";
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    document.body.style.backgroundColor = "white";
-});
-
-document.getElementById("download").onclick = function () {};
