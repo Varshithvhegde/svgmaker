@@ -1,67 +1,118 @@
-/* *{
-    margin: 0px;
-    padding: 0px;
-} */
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400&family=Orbitron&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-} 
-.title {
-    font-family: 'DynaPuff', cursive;
-    font-size: 3rem;
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-b, strong {
-    font-weight: bolder;
-    font-size: 50px;
+nav {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  background: #fff;
+  width: 100%;
+  box-shadow: 0px 4px 79px -32px rgba(0, 0, 0, 0.25);
 }
-.form-det{
-    text-align: center;
+nav .logo {
+  height: 100px;
+  margin-right: 2rem;
 }
-#main, #sub {
-    background-color: transparent; 
-    outline: none; 
-    padding: 5px 10px; 
-    border-radius: 9px; 
-    border: black solid 2px;
-    width: 20%;
+nav span {
+  font-family: "DynaPuff", cursive;
+  font-size: 3rem;
 }
-
-#id {
-    width: 55%;
+.formContainer {
+  margin: 2rem auto 1rem auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  justify-self: center;
+  font-family: "Exo 2", sans-serif;
 }
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%; 
-    background-color: rgb(236, 236, 236);
-    color: gray;
-    text-align: center;
- }
-
-nav{
-    font: 600;
-    
+.formContainer div {
+  display: flex;
+  flex-direction: column;
 }
-
-button {
-    background: #255ff4;
-    border-radius: 0.2em;
-    color: #fff;
-    cursor: pointer;
-    display: flex;
-    margin: auto;
-    padding: 0.5em 1em;
-    position: relative;
-    transition: background 0.15s linear;
-    width: 10.5em;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    -webkit-tap-highlight-color: transparent;
-    
+.formContainer div .fieldName {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0.5rem 0;
+}
+.formContainer div .fields {
+  outline: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  background: #ffffff;
+  border: 1px solid #2d3bb7;
+  width: 20rem;
+}
+label.uploadLabel {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.hide {
+  display: none;
+}
+.ccLabel {
+  font-size: 1rem;
+}
+.checkParent .checkChild {
+  display: flex;
+  flex-direction: row;
+}
+.checkParent .checkChild input {
+  margin-right: 1rem;
+}
+.submitBtnParent {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.submitBtnParent .submitBtn {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0.5rem 4rem;
+  border-radius: 1rem;
+  background: #38488a;
+  outline: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+}
+.svgContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+@media only screen and (min-width: 500px) and (max-width: 750px) {
+  .formContainer {
+    margin: 2rem;
+    margin-bottom: 1rem;
   }
- 
+  .formContainer div .fields {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 500px) {
+    .formContainer {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+    }
+    .formContainer div .fields {
+      width: 100%;
+    }
+    nav .logo{
+        margin-right: 1rem;
+    }
+    nav span {
+        font-family: "DynaPuff", cursive;
+        font-size: 2rem;
+    }
+}

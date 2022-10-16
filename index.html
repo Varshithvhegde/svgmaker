@@ -1,5 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SVG Maker</title>
     <link rel="stylesheet" href="styles.css" />
     <link
@@ -20,43 +24,40 @@
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   </head>
-
   <body>
-    <div class="container">
-      <nav class="navbar-expand-lg navbar-light" style="text-align: center">
-        <div class="container-fluid">
-          <h2 class="navbar-brand bg-light title" href="#"><b>SVG MAKER</b></h2>
-        </div>
-      </nav>
-      <div class="form-det">
-        <form>
-          <input
-            type="text"
-            id="main"
-            value=""
-            placeholder="Enter main heading"
-          /><br /><br />
-
-          <input
-            type="text"
-            id="sub"
-            value=""
-            placeholder="Enter sub heading"
-          /><br /><br />
-          <button type="button" class="btn btn-success" id="btn">
-            <i class="fa fa-"></i>View
-          </button>
-          <a class="btn btn-primary" id="download" download hidden>
-            <i class="fa fa-download"></i> Download
-          </a>
-          <br /><br />
-          <div style="position: fixed"><img id="svg" style="width: 55%" /></div>
-        </form>
+    <nav>
+      <img src="./logo.png" alt="logo img" class="logo" />
+      <span>SVG MAKER</span>
+    </nav>
+    <form class="formContainer">
+      <div class="Uname">
+        <label class="fieldName" for="MainHeading">Main Heading</label>
+        <input
+          class="fields"
+          type="text"
+          id="MainHeading"
+          placeholder="Please Enter main heading"
+        />
       </div>
+      <div class="Rname">
+        <label class="fieldName" for="SubHeading">Sub Heading</label>
+        <input
+          class="fields"
+          type="text"
+          id="SubHeading"
+          placeholder="Please Enter sub heading"
+        />
+      </div>
+      <div class="submitBtnParent">
+        <button type="button" id="viewBtn" class="submitBtn btn-success">View</button>
+      <a class="btn btn-primary" id="download" download hidden>
+        <i class="fa fa-download"></i> Download
+      </a>
+      </div>
+    </form>
+    <div class="svgContainer">
+      <img id="svg" style="width: 50%" />
     </div>
     <script src="index.js"></script>
-    <div class="footer">
-      <p>Copyright © 2022</p>
-    </div>
   </body>
 </html>
