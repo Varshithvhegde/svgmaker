@@ -99,6 +99,10 @@ label.uploadLabel {
     width: 100%;
   }
 }
+.svgmakeinstance{
+  width:100px;
+  height:200px;
+}
 @media only screen and (max-width: 500px) {
     .formContainer {
         display: flex;
